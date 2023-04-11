@@ -1,0 +1,30 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="product-content product-wrap clearfix" *ngFor="let hotel of hotels">
+	<div class="row">
+		<div class="col-md-5 col-sm-12 col-xs-12">
+			<div class="product-image">
+				<img [src]="getRandomImage()" alt="Immagine casuale" width="200" height="200">
+				<span class="tag2 hot">
+					HOT
+				</span>
+			</div>
+		</div>
+		<div class="col-md-7 col-sm-12 col-xs-12">
+			<div class="product-deatil">
+				<h5 class="name">
+					<a>
+						{{ hotel.nome }}
+						<div> {{ hotel.stelle }} <i class="fa fa-star text-primary"></i></div>
+						<span> {{ hotel.tipologia }}</span>
+					</a>
+				</h5>
+				<p class="price-container">
+					<span>$99</span>
+				</p>
+				<a href="javascript:void(0);" class="btn btn-success">
+					<button (click)="onButtonClick()">Prenota</button>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

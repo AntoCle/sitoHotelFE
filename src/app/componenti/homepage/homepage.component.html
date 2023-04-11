@@ -1,0 +1,78 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer class="container1" mode="side" opened>
+    <h3 class="sx">Le migliori occasioni da Antonino</h3>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <h4 class="sx">Scegli tra le nostre offerte</h4>
+    <mat-form-field appearance="fill">
+      <mat-label class="sx">Seleziona città:</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let hotel of cittas" [value]="hotel.value">
+          {{hotel.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <br>
+    <br>
+
+
+    <p>Da:</p>
+    <input type="date" [min]="minDate" [max]="maxDate" [(ngModel)]="startDate">
+    <p>a</p>
+    <input type="date" [min]="minDate" [max]="maxDate" [(ngModel)]="endDate">
+
+    <br><br>
+    <button routerLink="resultpage">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="search">
+        <span class="material-icons-outlined">
+          search
+        </span>
+      </mat-icon>
+    </button>
+    <br><br>
+
+    
+    <div class="info">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    </div>
+
+  </mat-drawer>
+  <mat-drawer-content class="matdr">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Camere</a></li>
+          <li><a href="#">Servizi</a></li>
+          <li><a href="#">Contatti</a></li>
+        </ul>
+      </nav>
+      <h1>Cerca hotel di lusso</h1>
+      <p>Servizi compresi nella prenotazione</p>
+      <button mat-raised-button color="primary" routerLink="/prenotazione">Prenota</button>
+    </header>
+
+    <section class="features">
+      <div class="feature">
+        <i class="fa fa-wifi"></i>
+        <h3>Wi-Fi gratuito</h3>
+        <p>Offriamo Wi-Fi gratuito in tutte le camere e nelle aree comuni.</p>
+      </div>
+      <div class="feature">
+        <i class="fa fa-car"></i>
+        <h3>Parcheggio privato</h3>
+        <p>Il nostro hotel dispone di un parcheggio privato per i nostri ospiti.</p>
+      </div>
+      <div class="feature">
+        <i class="fa fa-utensils"></i>
+        <h3>Ristorante gourmet</h3>
+        <p>Il nostro ristorante gourmet offre deliziose specialità locali e internazionali.</p>
+      </div>
+    </section>
+  </mat-drawer-content>
+</mat-drawer-container>

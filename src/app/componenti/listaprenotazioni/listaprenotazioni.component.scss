@@ -1,0 +1,53 @@
+.prenotazioni-list {
+    margin: 0px auto;
+    max-width: 550px;
+    background-color: #2850be;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  li:hover {
+    background-color: #f2f2f2;
+  }
+  
+  li div {
+    margin-bottom: 6.5px;
+  }
+  
+  li div:first-child {
+    font-weight: bold;
+  }
+  
+  li div:nth-child(odd) {
+    color: #666;
+  }
+  
+  li div:nth-child(even) {
+    color: #333;
+  }
+  
+  li div:last-child {
+    color: #888;
+    font-style: italic;
+  }
+  

@@ -1,0 +1,40 @@
+<div class="prenotazioni-list">
+  <h2 class="prenotazioni-title">{{ nomePrenotazione }}</h2>
+  <ul class="prenotazioni-ul">
+    <li *ngFor="let prenotazione of prenotazioni" class="prenotazione-li">
+      <div class="prenotazione-info">
+        <div class="prenotazione-dati">
+          <div class="prenotazione-label">Data inizio:</div>
+          <div class="prenotazione-value">{{ prenotazione.data_inizio }}</div>
+        </div>
+        <div class="prenotazione-dati">
+          <div class="prenotazione-label">Data fine:</div>
+          <div class="prenotazione-value">{{ prenotazione.data_fine }}</div>
+        </div>
+        <div class="prenotazione-dati">
+          <div class="prenotazione-label">Utente:</div>
+          <div class="prenotazione-value">{{ prenotazione.utente.nome }} {{ prenotazione.utente.cognome }}</div>
+          <!-- <div class="prenotazione-value">{{ prenotazione.utente.data_di_nascita }}</div>
+          <div class="prenotazione-value">{{ prenotazione.utente.numero_telefono }}</div>
+          <div class="prenotazione-value">{{ prenotazione.utente.email }}</div> -->
+        </div>
+        <div class="prenotazione-dati">
+          <div class="prenotazione-label">Camera:</div>
+          <div class="prenotazione-value">{{ prenotazione.camera.numero_camera }}</div>
+        </div>
+        <div class="prenotazione-dati">
+          <div class="prenotazione-label">Data creazione:</div>
+          <div class="prenotazione-value">{{ prenotazione.data_creazione }}</div>
+        </div>
+        <div class="prenotazione-dati">
+          <div class="prenotazione-label">Data ultima modifica:</div>
+          <div class="prenotazione-value">{{ prenotazione.data_ultima_modifica }}</div>
+        </div>
+        <div class="prenotazione-dati">
+          <div class="prenotazione-label">Versione:</div>
+          <div class="prenotazione-value">{{ prenotazione.versione }}</div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,37 @@
+<div class="container">
+  <h1>inserisci idCamera</h1>
+    <input [(ngModel)]="idCamera">
+    <h1>inserisci idUtente</h1>
+    <input [(ngModel)]="idUtente">
+<!-- devono stare fuori dal form! -->
+
+    <form [formGroup]="prenotazioneForm">
+    <button (click)="postPrenotazione()">Crea prenotazione</button>
+    <mat-form-field appearance="fill">
+      <mat-label>Data inizio</mat-label>
+      <input matInput formControlName="data_inizio" type="date" (click)="getIdCamera()" (click)="getIdUtente()">
+      <mat-error>la data è richiesta</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Data fine</mat-label>
+      <input matInput formControlName="data_fine" type="date">
+      <mat-error>la data è richiesta</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email">
+      <mat-error>Email non valida</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Telefono</mat-label>
+      <input matInput formControlName="telefono">
+      <mat-error>Il telefono è richiesto</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" routerLink="/listaprenotazioni">Visualizza tutte le prenotazioni</button>
+  </form> 
+  <div class="filler"></div>
+</div>
